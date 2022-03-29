@@ -1,2 +1,2 @@
 # RuleOfDivision
-This is the website for a learning game.
+This repository is for the website of a learning game.
