@@ -41,7 +41,9 @@ a:hover {
   transform: scale(1.2);
   background-color: #315152;
 }
-
+a {
+  color: rgb(0, 89, 255);
+}
 .active {
   display: flex;
   background: yellow;
@@ -57,13 +59,18 @@ footer {
 .container {
   display: grid;
 }
+.rectangle {
+  height: 170px;
+  width: 20rem;
+  background-color: yellow;
+}
 .item {
   font-size: 4rem;
 
   grid-column-start: 1;
-  grid-column-end: auto;
+  grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: auto;
+  grid-row-end: 3;
 }
 .image {
   display: flex;
@@ -71,4 +78,43 @@ footer {
 .quickLinks {
   background-color: #315152;
   color: antiquewhite;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 290px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#myInput {
+  width: 0rem;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }

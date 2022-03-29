@@ -9,24 +9,60 @@
   </head>
   <body>
     <header>
-      <nav class="main-nav" href="./index.html">
+      <nav class="main-nav">
         <a class="inActive" href="./index.html">Hem</a>
+        <a class="inActive" href="./guide.html">Guide</a>
+
+        <a class="inActive" href="./download.html">Ladda ner spelet</a>
 
         <a class="active" href="./contact.html">Kontakta oss</a>
 
-        <a class="inActive" href="./pictures.html"> Bilder</a>
+        <a class="inActive" href="./pictures.html">Galleri</a>
       </nav>
     </header>
-    <h1>Hör av er med frågor här:</h1>
-    <a
-      class="mail"
-      href="mailto:max.cardell.wasserman@skola.botkyrka.se?subject=Om spelet"
-    ></a>
+    <h1>Hör av er med tips, frågor eller feedback via mail:</h1>
+    <input
+      style="visibility: hidden"
+      type="text"
+      value="max.cardell.wasserman@skola.botkyrka.se"
+      id="myInput"
+    />
+
+    <div class="tooltip">
+      <button onclick="myFunction()" onmouseout="outFunc()">
+        <span class="tooltiptext" id="myTooltip">Kopiera</span>
+        Tryck här för att kopiera mailadressen.
+      </button>
+    </div>
+    <p>eller</p>
+    <input
+      style="visibility: hidden"
+      type="text"
+      value="max.cardell.wasserman@skola.botkyrka.se"
+      id="myInput"
+    />
+    <a href="mailto:max.cardell.wasserman@skola.botkyrka.se?subject=Om spelet"
+      ><button>Tryck här för att skicka ett mail</button></a
+    >
+    <script>
+      function myFunction() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Kopierade: " + copyText.value;
+      }
+
+      function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Kopiera";
+      }
+    </script>
 
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam
-      repellat soluta ex adipisci. Perferendis magnam adipisci provident. Minus,
-      molestias?
+      Vi är tacksamma för all feedback ni skickar efter att ha testat spelet
     </p>
   </body>
 </html>
