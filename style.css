@@ -1,5 +1,12 @@
 /*Gör responsiv, anpassa för telefon*/
-/**/
+
+* {
+  box-sizing: border-box;
+}
+
+/*gör lqg-loggan klickbar för att komma till den hemsidan, sätt den på rätt plats*/
+/*integrera spelets logga i spelet*/
+/*ta bort mario-bilden för att den är copyrighted*/
 
 html {
   scroll-behavior: smooth;
@@ -8,39 +15,49 @@ main {
   background-color: yellowgreen;
 }
 .tillLQG {
-  size: inherit;
+  /*max-height: fit-content;
+  max-width: fit-content;*/
+  height: 10rem;
+  width: 20%;
 }
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 p {
+  margin: 1rem;
   font-size: 2.2rem;
 }
 h3 {
+  margin: 1rem;
   font-size: 3.4rem;
   font-weight: 560;
+  min-width: 10%;
+  min-height: 10%;
 }
 .top {
   display: flex;
   flex-direction: row;
 }
 .nyheter {
+  width: 70%;
   display: flex;
+
   /*nyaste först*/
   flex-direction: row-reverse;
 }
 .main-nav {
+  margin: 0;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  background-color: #5f9ea0;
+  background-color: #333333;
+
   color: chocolate;
   transition: all 0.4s ease-in-out;
 }
 
 .main-nav a {
-  color: aliceblue;
+  color: 091313;
   text-decoration: dashed;
   margin: 6;
   font-size: 5em;
@@ -50,54 +67,52 @@ h3 {
   padding-right: 1rem;
 }
 .main-nav a {
-  font-size: 18px;
+  font-size: 3rem;
   color: azure;
 }
-.active a:hover {
-  background-color: yellow;
-}
-a:hover {
-  transform: scale(1.2);
-  background-color: #315152;
+.main-nav a:hover {
+  background-color: #edfeff;
+  color: black;
 }
 a {
   color: rgb(0, 89, 255);
+  min-width: 10%;
+  min-height: 10%;
 }
 .active {
+  width: 20%;
   display: flex;
-  background: yellow;
-  color: darkred;
+  background: rgb(0, 213, 255);
+  color: #333333;
+}
+.inActive {
+  width: 15%;
+  padding: 0.2rem;
 }
 
 footer {
+  margin: 1rem;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: black;
+  background-color: rgb(64, 59, 59);
   color: antiquewhite;
 }
 .container {
   display: grid;
 }
 .rectangle {
+  width: 30%;
   /*height: 15rem;
-  width: 20rem;*/
-  background-color: yellow;
+  */
+  min-width: 15rem;
+  background-color: rgb(64, 59, 59);
+  color: antiquewhite;
 }
-.item {
-  font-size: 4rem;
 
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
 .image {
   display: flex;
 }
-.quickLinks {
-  background-color: #315152;
-  color: antiquewhite;
-}
+/*---------Email--------------*/
 .tooltip {
   position: relative;
   display: inline-block;
@@ -137,6 +152,7 @@ footer {
   visibility: visible;
   opacity: 1;
 }
+/*-----------------------*/
 .dlBackground {
   color: aliceblue;
   background-image: url(./Bilder/intro-1525214782.jpg);
