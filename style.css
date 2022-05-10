@@ -1,4 +1,86 @@
 /*Gör responsiv, anpassa för telefon*/
+@media screen and (max-width: 768px) {
+  body {
+    background-color: aqua;
+  }
+  .main-nav {
+    visibility: hidden;
+  }
+  .main-nav-phone-ver {
+    visibility: visible;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  .top {
+    visibility: hidden;
+  }
+  .phoneTop {
+    visibility: visible;
+  }
+
+  p {
+    margin: 2rem;
+    font-size: 4.2rem;
+  }
+
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+}
+
+h3 {
+  margin: 1.5rem;
+  font-size: 4.2rem;
+  font-weight: 560;
+  min-width: 10%;
+  min-height: 10%;
+}
+.phoneTop {
+  visibility: hidden;
+  height: 0px;
+}
+.nyheter {
+  padding: 1.2rem;
+
+  /*få det här att gömma sig bakom en knapp när skärmen är för liten*/
+  width: 70%;
+  display: flex;
+  /*nyaste först*/
+  flex-direction: row-reverse;
+  background-color: #333333;
+}
+.artikel {
+  background: rgb(0, 213, 255);
+  padding: 0.7rem;
+}
 
 * {
   box-sizing: border-box;
@@ -11,20 +93,25 @@
 html {
   scroll-behavior: smooth;
 }
-main {
-  background-color: yellowgreen;
-}
 .tillLQG {
+  padding-left: 2rem;
+  float: left;
+  height: 10rem;
+}
+.antiTillLQG {
   /*max-height: fit-content;
   max-width: fit-content;*/
+  padding-right: 2rem;
+
+  float: right;
   height: 10rem;
-  width: 20%;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: lightblue;
 }
 p {
-  margin: 1rem;
+  margin: 2rem;
   font-size: 2.2rem;
 }
 h3 {
@@ -39,6 +126,7 @@ h3 {
   flex-direction: row;
 }
 .nyheter {
+  /*få det här att gömma sig bakom en knapp när skärmen är för liten*/
   width: 70%;
   display: flex;
 
@@ -46,7 +134,8 @@ h3 {
   flex-direction: row-reverse;
 }
 .main-nav {
-  margin: 0;
+  margin: -4rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -55,19 +144,19 @@ h3 {
   color: chocolate;
   transition: all 0.4s ease-in-out;
 }
+.main-nav-phone-ver {
+  visibility: hidden;
+}
 
 .main-nav a {
   color: 091313;
   text-decoration: dashed;
   margin: 6;
-  font-size: 5em;
+  font-size: 2rem;
   padding-top: 6mm;
-  padding-bottom: 10mm;
+  padding-bottom: 6mm;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-.main-nav a {
-  font-size: 3rem;
   color: azure;
 }
 .main-nav a:hover {
@@ -80,28 +169,39 @@ a {
   min-height: 10%;
 }
 .active {
+  /*wtf händer här*/
+  text-align: center;
   width: 20%;
-  display: flex;
   background: rgb(0, 213, 255);
   color: #333333;
 }
 .inActive {
   width: 15%;
   padding: 0.2rem;
+  text-align: center;
 }
 
 footer {
-  margin: 1rem;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: rgb(64, 59, 59);
+  margin: -2rem;
+  padding: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0em;
+  text-align: center;
+  flex-direction: row;
+  background-color: #333333;
   color: antiquewhite;
 }
-.container {
-  display: grid;
+.f {
+  font-size: 70%;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 1rem;
+}
+.f a {
+  font-size: 2rem;
 }
 .rectangle {
-  width: 30%;
+  width: 40%;
   /*height: 15rem;
   */
   min-width: 15rem;

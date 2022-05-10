@@ -10,18 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
-    <script src="springyEmojiCursor.js">
-      new springyEmojiCursor({emoji: "➗"});
-    </script>
   </head>
   <body>
     <header>
       <nav class="main-nav">
-        <img
-          class="tillLQG"
-          src="./Bilder/Skärmbild 2022-04-25 085118.png"
-          alt="lol"
-        />
+        <a href="https://lqgstudios.github.io/">
+          <img
+            class="tillLQG"
+            src="./Bilder/Skärmbild 2022-04-25 085118.png"
+            alt="lol"
+          />
+        </a>
         <a class="active" href="./index.html">Hem</a>
         <a class="inActive" href="./guide.html">Spela</a>
 
@@ -30,6 +29,22 @@
         <a class="inActive" href="./contact.html">Kontakta oss</a>
 
         <a class="inActive" href="./pictures.html">Galleri</a>
+        <a href="./index.html">
+          <img src="./Bilder/loggan.png" alt="Logo" class="antiTillLQG" />
+        </a>
+      </nav>
+      <nav class="main-nav-phone-ver">
+        <a href="#home" class="active">Logo</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
     </header>
     <h1>Rule of Division</h1>
@@ -55,7 +70,33 @@
       <div class="nyheter">
         <div class="artikel">
           <h4>Webbversionen är ute nu!</h4>
-          <a href="ruleofdivision.github.io/play">SPELA NU!</a>
+          <a href="https://ruleofdivision.github.io/play">SPELA NU!</a>
+        </div>
+      </div>
+    </div>
+    <div class="phoneTop">
+      <div class="phoneRectangle">
+        <h3>Överblick</h3>
+        <li>
+          <ul>
+            <!--gör de här till genvägar-->
+            <a href="#intro">Introduktion</a>
+          </ul>
+          <ul>
+            <a href="#vadLär">Vad lär vi ut? </a>
+          </ul>
+          <ul>
+            <a href="#förLär">För lärare</a>
+          </ul>
+          <ul>
+            <a href="#undervisning">Hur passar vi in i undervisningen?</a>
+          </ul>
+        </li>
+      </div>
+      <div class="nyheter">
+        <div class="artikel">
+          <h4>Webbversionen är ute nu!</h4>
+          <a href="https://ruleofdivision.github.io/play">SPELA NU!</a>
         </div>
       </div>
     </div>
@@ -168,17 +209,20 @@
       modi enim.
     </p>
     <footer>
-      <div class="container">
-        <div class="item item-1">
-          <h4>Här kommer det att stå någonting förr eller senare</h4>
-        </div>
-        <div class="item item-2">
-          <p>Item 2</p>
-        </div>
-        <div class="item item-3">
-          <p>Item 3</p>
-        </div>
-      </div>
+      <h3 class="f">Information</h3>
+      <p class="f">Studion:</p>
+      <a href="https://lqgstudios.github.io/">
+        <img src="./Bilder/Skärmbild 2022-04-25 085118.png" alt="LQG" />
+      </a>
+      <br />
+      <a href="https://lqgstudios.github.io/">https://lqgstudios.github.io/</a>
+      <h3 class="f">Utvecklarna:</h3>
+      <p class="f">
+        <br />
+        Anton Lamberth, Max Wasserman
+      </p>
+
+      <div><p class="f" style="font-size: 1rem">2022</p></div>
     </footer>
   </body>
 </html>
