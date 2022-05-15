@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
 /*Gör responsiv, anpassa för telefon*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1072px) {
   body {
     background-color: aqua;
   }
@@ -78,8 +79,11 @@ h3 {
   background-color: #333333;
 }
 .artikel {
+  width: 50%;
   background: rgb(0, 213, 255);
   padding: 0.7rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 * {
@@ -93,26 +97,18 @@ h3 {
 html {
   scroll-behavior: smooth;
 }
-.tillLQG {
-  padding-left: 2rem;
-  float: left;
-  height: 10rem;
-}
-.antiTillLQG {
-  /*max-height: fit-content;
-  max-width: fit-content;*/
-  padding-right: 2rem;
 
-  float: right;
-  height: 10rem;
-}
 body {
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   background-color: lightblue;
 }
 p {
-  margin: 2rem;
-  font-size: 2.2rem;
+  margin: 1rem;
+  font-size: 1.3rem;
+}
+h1 {
+  font-size: 3rem;
 }
 h3 {
   margin: 1rem;
@@ -120,6 +116,13 @@ h3 {
   font-weight: 560;
   min-width: 10%;
   min-height: 10%;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.9rem;
+  font-weight: lighter;
 }
 .top {
   display: flex;
@@ -133,7 +136,25 @@ h3 {
   /*nyaste först*/
   flex-direction: row-reverse;
 }
+.logo {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 6rem;
+}
+.lqgFont {
+  justify-content: left;
+  font-family: "Kanit";
+  color: white;
+  font-size: 2rem;
+  float: left;
+}
+.tillLQG {
+  float: left;
+  height: 6.5rem;
+  padding-bottom: 2.4rem;
+}
 .main-nav {
+  height: 11rem;
   margin: -4rem;
   padding-top: 4rem;
   display: flex;
@@ -152,7 +173,7 @@ h3 {
   color: 091313;
   text-decoration: dashed;
   margin: 6;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding-top: 6mm;
   padding-bottom: 6mm;
   padding-left: 1rem;
@@ -171,12 +192,12 @@ a {
 .active {
   /*wtf händer här*/
   text-align: center;
-  width: 20%;
+  width: 14%;
   background: rgb(0, 213, 255);
   color: #333333;
 }
 .inActive {
-  width: 15%;
+  width: 14%;
   padding: 0.2rem;
   text-align: center;
 }
@@ -210,12 +231,21 @@ footer {
 }
 
 .image {
-  display: flex;
+  width: auto;
+}
+.bottomImage {
+  width: 20rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 /*---------Email--------------*/
 .tooltip {
   position: relative;
   display: inline-block;
+}
+button {
+  font-size: 1.3rem;
+  background-color: aliceblue;
 }
 
 .tooltip .tooltiptext {
@@ -251,10 +281,4 @@ footer {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-}
-/*-----------------------*/
-.dlBackground {
-  color: aliceblue;
-  background-image: url(./Bilder/intro-1525214782.jpg);
-  background-repeat: repeat;
 }
