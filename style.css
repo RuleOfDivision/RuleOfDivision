@@ -1,15 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
 /*Gör responsiv, anpassa för telefon*/
-@media screen and (max-width: 768px) {
-  body {
-    background-color: aqua;
-  }
+@media screen and (max-width: 866px) {
   .main-nav {
-    visibility: hidden;
+    height: 40rem;
+    margin: -4rem;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #333333;
   }
-  .main-nav-phone-ver {
-    visibility: visible;
+
+  .main-nav a {
+    text-decoration: dashed;
+    margin: 6;
+    font-size: 1.6rem;
+    padding-top: 6mm;
+    padding-bottom: 6mm;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: azure;
   }
+  .main-nav a:hover {
+    background-color: #edfeff;
+    color: black;
+  }
+  a {
+    color: rgb(63, 91, 148);
+    min-width: 10%;
+    min-height: 10%;
+  }
+  .active {
+    /*wtf händer här*/
+    text-align: center;
+    width: 20rem;
+    background: rgb(0, 213, 255);
+    color: #333333;
+  }
+  .inActive {
+    width: 25rem;
+    padding: 0.2rem;
+    text-align: center;
+  }
+
   .topnav {
     overflow: hidden;
     background-color: #333;
@@ -64,10 +97,6 @@ h3 {
   min-width: 10%;
   min-height: 10%;
 }
-.phoneTop {
-  visibility: hidden;
-  height: 0px;
-}
 .nyheter {
   padding: 1.2rem;
 
@@ -99,6 +128,9 @@ html {
 }
 
 body {
+  justify-content: center;
+  text-align: center;
+
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   background-color: lightblue;
@@ -108,6 +140,7 @@ p {
   font-size: 1.3rem;
 }
 h1 {
+  text-align: left;
   font-size: 3rem;
 }
 h3 {
@@ -161,16 +194,9 @@ h5 {
   justify-content: center;
   flex-direction: row;
   background-color: #333333;
-
-  color: chocolate;
-  transition: all 0.4s ease-in-out;
-}
-.main-nav-phone-ver {
-  visibility: hidden;
 }
 
 .main-nav a {
-  color: 091313;
   text-decoration: dashed;
   margin: 6;
   font-size: 1.6rem;
@@ -185,7 +211,7 @@ h5 {
   color: black;
 }
 a {
-  color: rgb(0, 89, 255);
+  color: rgb(15, 67, 170);
   min-width: 10%;
   min-height: 10%;
 }
